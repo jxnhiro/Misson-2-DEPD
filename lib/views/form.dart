@@ -107,6 +107,7 @@ class _FormPageState extends State<FormPage> {
                                   },
                                   controller: nameController,
                                   decoration: InputDecoration(
+                                    prefixIcon: Icon(Icons.person),
                                     filled: true,
                                     fillColor: Colors.white,
                                     enabledBorder: OutlineInputBorder(
@@ -120,7 +121,7 @@ class _FormPageState extends State<FormPage> {
                                       color: light_gray,
                                       // fontWeight: FontWeight.w300,
                                       fontSize: 14,
-                                      fontFamily: 'Fontspring',
+                                      // fontFamily: 'Fontspring',
                                     ),
                                   ),
                                 ),
@@ -136,6 +137,7 @@ class _FormPageState extends State<FormPage> {
                                       AutovalidateMode.onUserInteraction,
                                   controller: emailController,
                                   decoration: InputDecoration(
+                                    prefixIcon: Icon(Icons.mail),
                                     filled: true,
                                     fillColor: Colors.white,
                                     enabledBorder: OutlineInputBorder(
@@ -149,7 +151,7 @@ class _FormPageState extends State<FormPage> {
                                     labelStyle: TextStyle(
                                       color: light_gray,
                                       // fontWeight: FontWeight.w300,
-                                      fontFamily: 'Fontspring',
+                                      // fontFamily: 'Fontspring',
                                       fontSize: 14,
                                     ),
                                   ),
@@ -166,6 +168,7 @@ class _FormPageState extends State<FormPage> {
                                   },
                                   controller: phoneController,
                                   decoration: InputDecoration(
+                                    prefixIcon: Icon(Icons.phone),
                                     filled: true,
                                     fillColor: Colors.white,
                                     enabledBorder: OutlineInputBorder(
@@ -179,7 +182,7 @@ class _FormPageState extends State<FormPage> {
                                       color: light_gray,
                                       // fontWeight: FontWeight.w300,
                                       fontSize: 14,
-                                      fontFamily: 'Fontspring',
+                                      // fontFamily: 'Fontspring',
                                     ),
                                   ),
                                 ),
@@ -187,6 +190,7 @@ class _FormPageState extends State<FormPage> {
                                 DropdownButtonFormField(
                                   isExpanded: true,
                                   decoration: InputDecoration(
+                                    // prefixIcon: Icon(Icons.home),
                                     filled: true,
                                     fillColor: Colors.white,
                                     enabledBorder: OutlineInputBorder(
@@ -199,7 +203,7 @@ class _FormPageState extends State<FormPage> {
                                       color: light_gray,
                                       // fontWeight: FontWeight.w300,
                                       fontSize: 14,
-                                      fontFamily: 'Fontspring',
+                                      // fontFamily: 'Fontspring',
                                     ),
                                   ),
                                   hint: Text(
@@ -229,6 +233,7 @@ class _FormPageState extends State<FormPage> {
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: brown,
+                                      minimumSize: Size(180, 50),
                                     ),
                                     onPressed: () {
                                       if (_bookKey.currentState!.validate()) {
@@ -236,10 +241,30 @@ class _FormPageState extends State<FormPage> {
                                             context: context,
                                             builder: (BuildContext context) {
                                               return AlertDialog(
-                                                title: Text(
-                                                    "Booking Confirmation"),
+                                                backgroundColor: darkblue,
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                            Radius.circular(
+                                                                15))),
+                                                title:
+                                                    Text("Booking Confirmation",
+                                                        style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 24,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          fontFamily: 'Futura',
+                                                        )),
                                                 content: Text(
-                                                    "HUNTER x HUNTER\n\n${_cinemaTimeValue.toString()}\n\nCustomer Name: ${nameController.text}\n\nSeat: Free to choose | VIP.\n\nMr, Ms, or Mrs. ${nameController.text}, we will remind you of the film schedule again in your email and phone as per information given 1 day before the rolling of the film.\n\nEmail: ${emailController.text}\n\nPhone Number: ${phoneController.text}\n\nExisting issues and customer complaints can be referred to cinemaplex@21.com"),
+                                                    "HUNTER x HUNTER\n\n${_cinemaTimeValue.toString()}\n\nCustomer Name: ${nameController.text}\n\nSeat: Free to choose | VIP.\n\nMr, Ms, or Mrs. ${nameController.text}, we will remind you of the film schedule again in your email and phone as per information given 1 day before the rolling of the film.\n\nEmail: ${emailController.text}\n\nPhone Number: ${phoneController.text}\n\nExisting issues and customer complaints can be referred to cinemaplex@21.com",
+                                                    style: TextStyle(
+                                                      color: light_gray,
+                                                      fontSize: 16,
+                                                      // fontWeight:
+                                                      //     FontWeight.w300,
+                                                      // fontFamily: 'Fontspring',
+                                                    )),
                                                 actions: <Widget>[
                                                   TextButton(
                                                     child:
@@ -258,9 +283,29 @@ class _FormPageState extends State<FormPage> {
                                             context: context,
                                             builder: (BuildContext context) {
                                               return AlertDialog(
-                                                title: Text("Booking Failed"),
+                                                backgroundColor: darkblue,
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                            Radius.circular(
+                                                                15))),
+                                                title: Text("Booking Failed",
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontFamily: 'Futura',
+                                                    )),
                                                 content: Text(
-                                                    "Please complete and fill all the fields"),
+                                                    "Please complete and fill all the fields",
+                                                    style: TextStyle(
+                                                      color: light_gray,
+                                                      fontSize: 16,
+                                                      // fontWeight:
+                                                      //     FontWeight.w300,
+                                                      // fontFamily: 'Fontspring',
+                                                    )),
                                                 actions: <Widget>[
                                                   TextButton(
                                                     child: const Text('OK'),
