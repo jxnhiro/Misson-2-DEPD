@@ -125,7 +125,7 @@ class _FormPageState extends State<FormPage> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(height: 24),
+                                SizedBox(height: 16),
                                 TextFormField(
                                   keyboardType: TextInputType.emailAddress,
                                   validator: (value) {
@@ -155,7 +155,7 @@ class _FormPageState extends State<FormPage> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(height: 24),
+                                SizedBox(height: 16),
                                 TextFormField(
                                   keyboardType: TextInputType.number,
                                   autovalidateMode:
@@ -184,7 +184,7 @@ class _FormPageState extends State<FormPage> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(height: 24),
+                                SizedBox(height: 16),
                                 DropdownButtonFormField(
                                   isExpanded: true,
                                   decoration: InputDecoration(
@@ -224,7 +224,7 @@ class _FormPageState extends State<FormPage> {
                                     });
                                   },
                                 ),
-                                SizedBox(height: 24),
+                                SizedBox(height: 16),
                                 Container(
                                   width: double.infinity,
                                   child: ElevatedButton(
