@@ -13,6 +13,7 @@ class _WidgetPageState extends State<WidgetPage> {
   Color darkblue = Color(0xFF0c1d37);
   Color brown = Color(0xFF37260c);
   Color light_gray = Color(0xFF727d90);
+  Color blue = Color(0xFF153361);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -231,7 +232,7 @@ class _WidgetPageState extends State<WidgetPage> {
                           alignment: Alignment.bottomRight,
                           child: Container(
                             decoration: BoxDecoration(
-                              border: Border.all(color: darkblue, width: 8),
+                              border: Border.all(color: Colors.transparent),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(12)),
                               color: brown,
@@ -249,7 +250,7 @@ class _WidgetPageState extends State<WidgetPage> {
                                 label: Text("Book Ticket",
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 12,
+                                      fontSize: 10,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'Futura',
                                     )),
