@@ -239,7 +239,7 @@ class _FormPageState extends State<FormPage> {
                                                 title: Text(
                                                     "Booking Confirmation"),
                                                 content: Text(
-                                                    "HUNTER x HUNTER\n\n${_cinemaTimeValue.toString()}\n\nCustomer Name: ${nameController.text}\nFree to choose seat.\nMr, Ms, or Mrs. ${nameController.text}, we will remind you of the film schedule again in your email and phone as per information given 1 day before the rolling of the film.\nEmail: ${emailController.text}\nPhone Number: ${phoneController.text}\n Existing issues and customer complaints can be referred to cinemaplex@21.com"),
+                                                    "HUNTER x HUNTER\n\n${_cinemaTimeValue.toString()}\n\nCustomer Name: ${nameController.text}\n\nSeat: Free to choose | VIP.\n\nMr, Ms, or Mrs. ${nameController.text}, we will remind you of the film schedule again in your email and phone as per information given 1 day before the rolling of the film.\n\nEmail: ${emailController.text}\n\nPhone Number: ${phoneController.text}\n\nExisting issues and customer complaints can be referred to cinemaplex@21.com"),
                                                 actions: <Widget>[
                                                   TextButton(
                                                     child:
