@@ -28,7 +28,6 @@ class _FormPageState extends State<FormPage> {
 
   final _bookKey = GlobalKey<FormState>();
 
-  final cinemaTimeController = TextEditingController();
   final emailController = TextEditingController();
   final nameController = TextEditingController();
   final phoneController = TextEditingController();
@@ -231,7 +230,50 @@ class _FormPageState extends State<FormPage> {
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: brown,
                                     ),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      if (_bookKey.currentState!.validate()) {
+                                        showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                title: Text(
+                                                    "Booking Confirmation"),
+                                                content: Text(
+                                                    "HUNTER x HUNTER\n\n${_cinemaTimeValue.toString()}\n\nCustomer Name: ${nameController.text}\nFree to choose seat.\nMr, Ms, or Mrs. ${nameController.text}, we will remind you of the film schedule again in your email and phone as per information given 1 day before the rolling of the film.\nEmail: ${emailController.text}\nPhone Number: ${phoneController.text}\n Existing issues and customer complaints can be referred to cinemaplex@21.com"),
+                                                actions: <Widget>[
+                                                  TextButton(
+                                                    child:
+                                                        const Text('Confirm'),
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .popUntil((route) =>
+                                                              route.isFirst);
+                                                    },
+                                                  ),
+                                                ],
+                                              );
+                                            });
+                                      } else {
+                                        showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                title: Text("Booking Failed"),
+                                                content: Text(
+                                                    "Please complete and fill all the fields"),
+                                                actions: <Widget>[
+                                                  TextButton(
+                                                    child: const Text('OK'),
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                  ),
+                                                ],
+                                              );
+                                            });
+                                      }
+                                    },
                                     child: Text("Book Now",
                                         style: TextStyle(
                                           color: Colors.white,
