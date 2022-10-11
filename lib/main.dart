@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mission_one/views/widget.dart';
+import 'pages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const WidgetPage(),
     );
   }
